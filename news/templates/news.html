@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ news.title }}{% endblock %}
+
+{% block content %}
+<header class="">
+    <div class="container">
+        <h1 class="news-title">{{ news.title }}</h1>
+        <p class="news-meta">
+            By {{ news.author }} on {{ news.date_published.strftime('%B %d, %Y') }}
+            {% if news.news_source %} from {{ news.news_source }}{% endif %}
+        </p>
+        <p class="news-details">
+            <span class="news-detail"><strong>Category:</strong> {{ news.category }}</span>
+            {% if news.tags %}
+            <span class="news-detail"><strong>Tags:</strong> {{ news.tags|join(", ") }}</span>
+            {% endif %}
+            <span class="news-detail"><strong>Views:</strong> {{ news.views }}</span>
+            {% if news.url %}
+            <span class="news-detail"><a href="{{ news.url }}" target="_blank">Read the original article</a></span>
+            {% endif %}
+        </p>
+    </div>
+</header>
+
+<section class="container news-content">
+    <div class="row">
+        <div class="col-12">
+            <div class="news-image-wrapper text-center">
+                <img src="{{ news.image_url }}" class="news-image" alt="Image illustrating the article {{ news.title }}">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <section class="news-summary">
+                <h3>Summary</h3>
+                <p>{{ news.AI.summary }}</p>
+            </section>
+            
+            <section class="news-full-text">
+                <h3>Full Text</h3>
+                {% for paragraph in news.web_scrape.content %}
+                    <p class="news-body">{{ paragraph }}</p>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}

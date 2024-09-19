@@ -1,0 +1,14 @@
+# Backend
+Flask==2.2.2
+flask-paginate==2022.1.8
+Flask-Session==0.4.0
+python-slugify==8.0.4
+pymongo==4.4.1
+gunicorn==23.0.0
+Werkzeug==2.2.3
+
+
+# Configuration
+klein_config==4.0.2
+klein_mongo==3.0.0
+

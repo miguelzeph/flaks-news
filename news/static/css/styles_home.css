@@ -1,0 +1,49 @@
+/* Estilo para ajustar a altura das imagens do carrossel */
+.carousel-img {
+    height: 300px; /* Defina a altura desejada para as imagens */
+    object-fit: cover; /* Mantém a proporção e recorta as bordas para cobrir o espaço */
+    width: 100%; /* Mantém a largura total */
+}
+
+/* Ajustes adicionais para o carrossel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para os títulos das seções principais */
+.section-title {
+    font-size: 1.2rem; /* Tamanho da fonte maior */
+    font-weight: 100;  /* Peso da fonte em negrito */
+    color: #535353;       /* Cor do texto semelhante ao título principal */
+    margin-bottom: 1.5rem; /* Espaçamento abaixo do título */
+    text-align: center; /* Centralizar o título */
+    text-transform: uppercase; /* Transformar o texto em maiúsculas */
+}
+
+/* Cards Style */
+/* Estilizar os cards e imagens */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    height:200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Ajustar a imagem sem distorção */
+}
+
+.card-body {
+    flex: 1 1 auto; /* Permite que o corpo do card ocupe o espaço restante */
+}
+
+.card-footer {
+    flex-shrink: 0; /* Impede que o rodapé encolha */
+}
+
+/* Certifique-se de que a altura mínima do card seja consistente */
+.card {
+    min-height: 300px; /* Ajuste conforme necessário */
+}

@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fundo leve para melhor contraste */
+    color: #333;
+}
+
+/* Cabeçalho da notícia */
+.news-header {
+    background-color: #3f6660;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 4px solid #ffffff;
+}
+
+.news-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-meta {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+/* Seção de detalhes */
+.news-details {
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #333; /* Cor do texto, para boa legibilidade */
+    font-family: 'Arial', sans-serif; /* Fonte limpa e moderna */
+    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+.news-detail {
+    margin-right: 10px;
+    font-family: 'Georgia', serif;
+    color: #555;
+}
+
+.news-detail a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.news-detail a:hover {
+    text-decoration: underline;
+}
+
+/* Imagem */
+.news-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Texto da notícia */
+.news-body {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    color: #444;
+}
+
+/* Ajuste para a seção de resumo */
+.news-summary h3, .news-full-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #3f6660;
+}
+
+.news-summary p {
+    background-color: #eef7f5;
+    padding: 1.2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+/* Estilo adicional para textos e links */
+.news-full-text p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: #3f6660;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Melhorar a responsividade */
+@media (max-width: 768px) {
+    .news-title {
+        font-size: 2rem;
+    }
+    
+    .news-summary h3, .news-full-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .news-detail {
+        margin-right: 10px;
+    }
+}

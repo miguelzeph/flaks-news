@@ -1,0 +1,30 @@
+# MongoDB Settings
+mongo:
+  username: <your-username>
+  password: <your-passowrd>
+  host: <host>
+  port: 27017
+  authSource: admin
+  authMechanism: DEFAULT
+  database: django-news
+  collection:
+    news: news
+    comments: comments
+    authentication: authentication
+
+# News API Settings
+newsapi:
+  key: <your-API>
+  url: 'https://newsapi.org/v2/top-headlines'
+
+browser_driver:
+  path: web_scraper/driver_Chromium/chromedriver
+  url_summarizer: https://www.zerogpt.com/summarizer
+
+
+flask:
+  secret_key: mysecretkey
+  session_type: filesystem
+  debug: 0
+  api_host: 0.0.0.0
+  api_port: 5000
