@@ -55,6 +55,12 @@ project_format = {
     }
 }
 
+match_format = {
+    "$match":{
+        "web_scrape.content":{"$exists":False},
+    }
+}
+
 limit_stage = {
     "$limit": 100
 }
