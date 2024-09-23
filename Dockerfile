@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copie o arquivo de configuração para o diretório de trabalho (verifique se ele é realmente necessário no seu caso Flask)
-COPY config_django_news_mongo_atlas.yml /app/
+COPY config_example.yml /app/
 
 # Copie o código fonte para o diretório de trabalho
 COPY mongo /app/mongo
@@ -20,7 +20,7 @@ COPY requirements.deploy.txt /app/
 RUN pip install --no-cache-dir -r requirements.deploy.txt
 
 # Defina as variáveis de ambiente (certifique-se de que a configuração seja necessária)
-ENV KLEIN_CONFIG=/app/config_django_news_mongo_atlas.yml
+ENV KLEIN_CONFIG=/app/config_example.yml
 
 # Exponha a porta em que o Flask irá rodar com Gunicorn (flaks is 5000 but Gunicorn use 8000)
 EXPOSE 8000
