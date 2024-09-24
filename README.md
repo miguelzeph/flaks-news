@@ -3,7 +3,7 @@
 ![MinuteNews](./minutenews.png)
 
 
-Welcome to Django News! This project demonstrates how to use Django to build a news website efficiently. It automates the process of updating news content and allows you to manage everything from your local machine by simply deploying the Django site and updating the database.
+Welcome to Flask News! This project demonstrates how to use Flask to build a news website efficiently. It automates the process of updating news content and allows you to manage everything from your local machine. You can easily update the database and deploy changes without long deployment times, ensuring a smooth and quick process.
 
 ## Dependencies
 
@@ -48,17 +48,6 @@ docker-compose up --build
 ```
 **Note**: Use config_example.yml as a template to create your own config.yml. The information in config.yml might not be included in the repository.
 
-## Starting
-
-- 1-) Creating project:
-```bash
-django-admin startproject django_news
-cd django_news
-```
-- 2-) Creating application of news:
-```bash
-django-admin startapp noticias
-```
 
 ## Populating the Database with News
 
@@ -76,29 +65,9 @@ To scrape news data from the web, execute:
 python pipeline_web_scraper.py
 ```
 
-## Summarizing News Text
 
-To summarize news content, use:
+## Pipeline to Summarize Text
 
-```bash
-python pipeline_summarize_text.py
-```
-
-## Populating DB with News 
-
-This part can be an web scraper generating information with OpenAI API.
-
-```bash
-python pipeline_populate_db.py
-```
-
-## Scrape News
-
-```bash
-python pipeline_web_scraper.py
-```
-
-## Pipeline Summarize Text
 
 ```bash
 python pipeline_summarize_text.py
