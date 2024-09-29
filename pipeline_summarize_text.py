@@ -3,14 +3,6 @@ from mongo.mongo_settings import collection_news
 from datetime import datetime
 
 
-# Get URLS
-project_format = {
-    "$project": {
-        "web_scrape.content": 1,
-        "slug":1
-    }
-}
-
 # Get all documents web scraped with no AI summary
 match_format = {
     "$match":{
@@ -19,15 +11,26 @@ match_format = {
     }
 }
 
+# Get URLS
+project_format = {
+    "$project": {
+        "web_scrape.content": 1,
+        "slug":1
+    }
+}
+
 
 documents = list(collection_news.aggregate(
         [
-            project_format,
+            # First find the documents and after format project
             match_format,
+            project_format,
             # limit_stage
         ]
     )
 )
+
+print(f"number of documents to summarize:{len(documents)}")
 
 for document in documents:
     
