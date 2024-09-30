@@ -12,3 +12,13 @@ def clean_title(title:str) -> str:
     parts = title.split(' - ')
     
     return parts[0]
+
+
+def get_spotlight_news(news_list:list)->list:
+    
+    spotlight = sorted(news_list, key=lambda x: x["views"], reverse=True)
+    
+    if len(spotlight) >10:
+        return spotlight[0:10]
+    
+    return spotlight
